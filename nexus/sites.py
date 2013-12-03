@@ -82,7 +82,7 @@ class NexusSite(object):
             del self._registry[namespace]
 
     def get_urls(self):
-        from django.conf.urls.defaults import patterns, url, include
+        from django.conf.urls import patterns, url, include
 
         base_urls = patterns('',
             url(r'^media/(?P<module>[^/]+)/(?P<path>.+)$', self.media, name='media'),
