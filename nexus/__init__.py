@@ -43,7 +43,7 @@ def autodiscover(site=None):
         globals()['site'] = locals()['site']
 
     import imp
-    from django.utils.importlib import import_module
+    from importlib import import_module
     from django.conf import settings
 
     for app in settings.INSTALLED_APPS:
